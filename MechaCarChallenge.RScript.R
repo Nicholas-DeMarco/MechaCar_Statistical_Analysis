@@ -7,7 +7,8 @@ library(dplyr)
 library(tidyverse)
 mecha_mpg <- read.csv(file='./MechaCar_mpg.csv',check.names=F,stringsAsFactors = F) 
 
-#5. Perform linear regression using the lm() function. In the lm() function, pass in all six variables (i.e., columns), and add the dataframe you created in Step 4 as the data parameter.
+#5. Perform linear regression using the lm() function. In the lm() function, pass in all six variables (i.e., columns), and add the dataframe you created 
+# in Step 4 as the data parameter.
 
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)
 
@@ -19,7 +20,8 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 
 mecha_coil <- read.csv(file='./Suspension_Coil.csv',check.names=F,stringsAsFactors = F)
 
-#3. Write an RScript that creates a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
+#3. Write an RScript that creates a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of 
+# the suspension coil’s PSI column.
 
 total_summary <- mecha_coil %>% summarize(Mean_PSI=mean(PSI),
                                           Median_PSI=median(PSI),
@@ -27,7 +29,8 @@ total_summary <- mecha_coil %>% summarize(Mean_PSI=mean(PSI),
                                           Std_Dev_PSI=sd(PSI),
                                           Num_Coil=n(), .groups = 'keep')
 
-#4. Write an RScript that creates a lot_summary dataframe using the group_by() and the summarize() functions to group each manufacturing lot by the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
+#4. Write an RScript that creates a lot_summary dataframe using the group_by() and the summarize() functions to group each manufacturing lot by the mean, 
+# median, variance, and standard deviation of the suspension coil’s PSI column.
 
 lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),
                                                                          Median_PSI=median(PSI),
@@ -35,11 +38,13 @@ lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PS
                                                                          Std_Dev_PSI=sd(PSI),
                                                                          Num_Coil=n(), .groups = 'keep')
 
-#1. In your MechaCarChallenge.RScript, write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 pounds per square inch.
+#1. In your MechaCarChallenge.RScript, write an RScript using the t.test() function to determine if the PSI across all manufacturing lots is statistically
+# different from the population mean of 1,500 pounds per square inch.
 
 t.test(mecha_coil$PSI,mu=1500)
 
-#2. Next, write three more RScripts in your MechaCarChallenge.RScript using the t.test() function and its subset() argument to determine if the PSI for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
+#2. Next, write three more RScripts in your MechaCarChallenge.RScript using the t.test() function and its subset() argument to determine if the PSI
+# for each manufacturing lot is statistically different from the population mean of 1,500 pounds per square inch.
 
 lot1 <- subset(mecha_coil, Manufacturing_Lot=="Lot1")
 lot2 <- subset(mecha_coil, Manufacturing_Lot=="Lot2")
