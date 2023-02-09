@@ -18,11 +18,11 @@ Does this linear model predict mpg of MechaCar prototypes effectively? Why or wh
 
 ## Summary Statistics on Suspension Coils
 
-Total Summary
+### Total Summary
 
 ![Screenshot (156)](https://user-images.githubusercontent.com/114521887/217595699-4b1ba72b-0aec-4e6a-92a2-4e29a294f02c.png)
 
-Lot Summary
+### Lot Summary
 
 ![Screenshot (157)](https://user-images.githubusercontent.com/114521887/217595725-0332af26-03c9-45ae-bd5a-48c0caea87c0.png)
 
@@ -32,11 +32,11 @@ The design specifications for the MechaCar suspension coils dictate that the var
 
 ## T-Tests on Suspension Coils
 
-All manufacturing lots
+### All Manufacturing Lots
 
 ![Screenshot (160)](https://user-images.githubusercontent.com/114521887/217603796-4a6fc966-8310-4cb0-9b83-75b9fbc991f0.png)
 
-Each manufacturing lot separately
+### Each Manufacturing Lot Separately
 
 ![Screenshot (161)](https://user-images.githubusercontent.com/114521887/217603887-b6fef47d-96c1-4549-a252-fb0be1060005.png)
 
